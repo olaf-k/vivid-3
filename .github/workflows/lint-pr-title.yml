@@ -13,5 +13,8 @@ jobs:
         with:
           requireScope: true
           subjectPattern: /VIV-\d+/
+          subjectPatternError: |
+            The subject "{subject}" of the pull request title "{title}"
+            must contain a reference to the Jira ticket (VIV-xxx).
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
