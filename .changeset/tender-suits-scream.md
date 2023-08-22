@@ -1,5 +1,0 @@
----
-'vivid-nx': minor
----
-
-houlalalalalalala
