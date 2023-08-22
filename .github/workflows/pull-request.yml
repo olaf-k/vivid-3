@@ -17,5 +17,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        ls -aFl .
-        node ./test.js
+          ls -aFl /home/runner/work/vivid-3/vivid-3
+          node ./test.js
