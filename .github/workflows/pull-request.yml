@@ -16,10 +16,12 @@ jobs:
     if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
       - run: |
           pwd
           echo listing dot
           ls -aFl .
-          echo listing full path
-          ls -aFl /home/runner/work/vivid-3
-          node /home/runner/work/vivid-3/test.js
+          node ./test.js
