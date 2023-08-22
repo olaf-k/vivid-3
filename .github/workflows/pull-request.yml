@@ -21,5 +21,5 @@ jobs:
           echo listing dot
           ls -aFl .
           echo listing full path
-          ls -aFl /home/runner/work/vivid-3/vivid-3
-          node ./test.js
+          ls -aFl /home/runner/work/vivid-3
+          node /home/runner/work/vivid-3/test.js
