@@ -16,10 +16,9 @@ exec('git branch --show-current', (err, branch) => {
             process.exit(-1);
         }
 
-        console.log(status);
-
         const files = status.trim().split('\n').map(s => s.substring(s.lastIndexOf('\t') + 1));
-        if (files.filter(name => name === NOCHANGE_PREFIX + branch || /^\.changeset\/[-\w]+\.md$/.test(name)).length === 0) {
+        if (files.filter(name => name === `.changeset/${NOCHANGE_PREFIX}${branch}` || /^\.changeset\/[-\w]+\.md$/.test(name)).length === 0) {
+            console.error(`no changeset or bypass file found, please run npm whatever`);
             process.exit(-1);
         }
     });
