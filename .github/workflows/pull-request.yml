@@ -18,5 +18,8 @@ jobs:
     steps:
       - run: |
           pwd
+          echo listing dot
           ls -aFl .
+          echo listing full path
+          ls -aFl /home/runner/work/vivid-3/vivid-3
           node ./test.js
