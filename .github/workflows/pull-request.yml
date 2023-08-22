@@ -21,7 +21,4 @@ jobs:
         with:
           node-version: '14'
       - run: |
-          pwd
-          echo listing dot
-          ls -aFl .
-          node ./test.js
+          node ./tools/test.js
