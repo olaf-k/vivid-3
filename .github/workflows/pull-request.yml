@@ -22,5 +22,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - run: |
-          node ./tools/test.js
+      - run: node ./tools/test.js
+        env:
+          BRANCH_NAME: ${{ github.head_ref || github.ref_name }}           
