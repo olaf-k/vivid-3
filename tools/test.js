@@ -10,7 +10,7 @@ exec('git branch --show-current', (err, branch) => {
     }
     branch = branch.trim();
 
-    exec('git diff origin/HEAD --name-status --diff-filter=d', (err, status) => {
+    exec('git diff origin/main... --name-status --diff-filter=d', (err, status) => {
         if (err) {
             console.error(`exec error while retrieving commit files list: ${err}`);
             process.exit(-1);
