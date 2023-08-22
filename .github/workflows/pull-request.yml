@@ -21,4 +21,5 @@ jobs:
         with:
           node-version: '14'
       - run: |
+          git branch -r
           node ./tools/test.js
